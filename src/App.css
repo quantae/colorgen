@@ -1,24 +1,111 @@
+* {
+ box-sizing: border-box; 
+}
+
 .App {
+  text-align: center;
+  background-image: url(../src/bgImage.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.App-bg-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(23, 10, 10, 0.54);
+  z-index: 1;
+}
+.color-pallet {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin: 25vh auto;
+  z-index: 2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.color-hex-display  {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  bottom: 83.23%;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 22px 22px 0px 0px;
+  width: 400px; 
+  height: 50px;
+  font-weight: bold;
+}
+
+.color-hex-display p {
+  margin: 0 auto;
+}
+
+.color-window-display {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  height: 350px;
+  background-color: #8B5DEC;
+  position: absolute;
+  width: 400px;
+  top: 16.77%;
+  text-align: center;
+}
+/** REFRESH BUTTON STYLES*/
+.refresh-btn {
+  position: relative;
+  background-color: transparent;
+  outline: none;
+  border: solid 1px transparent;
+  top: 362px;
+  margin: 10px auto;
+  padding: 0px;
+  border-radius: 50%;
+} 
+
+.btn-icon {
+  position: relative;
+  width: 50px;
+  margin-top: 10px;
+}
+
+.btn-icon:active {
+  top: 4px;
+}
+
+
+
+
+.App-logo:hover{
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  App-logo:hover {
+    animation: App-logo-spin infinite 5s linear;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo:active {
+    animation: App-logo-spin infinite 5s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: transparent;
+  min-height: 8vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
